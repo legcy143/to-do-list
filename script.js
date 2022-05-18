@@ -16,7 +16,7 @@ addBtn.addEventListener("click", function (e) {
     notesObj.push(addTxt.value);
     localStorage.setItem("notes", JSON.stringify(notesObj));
     addTxt.value = " ";
-    console.log(notesObj);
+    // console.log(notesObj);
     showNotes();
 })
 
@@ -32,7 +32,7 @@ function showNotes() {
     notesObj.forEach(function (element, index) {
         html += `
         <div class="note">
-        <h1>card title ${index + 1}</h1>
+        <h1>Note ${index + 1}</h1>
         <p> ${element}</p>
         <button id="${index}" onclick="deleteNote(this.id)">delete note</button>
         </div>
@@ -43,14 +43,13 @@ function showNotes() {
         notesElm.innerHTML = html;
     }
     else {
-        notesElm.innerHTML = `nothing is here`;
+        notesElm.innerHTML = `  <h1 class="nothing">opps there is nothing add some notes...</h1>`;
     }
 }
 
 
 // function to dlete notes 
 function deleteNote(index) {
-    console.log(`hey am i dlete`, index);
 
     let notes = localStorage.getItem("notes");
     if (notes == null) {
@@ -69,6 +68,7 @@ function deleteNote(index) {
 let search = document.getElementById("searchTxt")
 search.addEventListener("input" ,function(){
     let inputVal = search.value.toLowerCase();
+    let boxjss = document.getElementById("boxjss");
 
     let noteCards = document.getElementsByClassName('note');
     Array.from(noteCards).forEach(function(element){
@@ -77,14 +77,23 @@ search.addEventListener("input" ,function(){
             element.style.display = "block";
         }
         else{
-            element.style.display = "none";
+            element.style.display = "none"; 
+
         }
     })
 })
 
-
 //  for dlete all notes 
-function btn(){
+function dlt(){
     localStorage.clear();
     location.reload()
 }
+
+
+
+// more feature comes in future===
+
+// change tittle 
+// mark as a important
+// seprate notes by user
+// syns and host to web server

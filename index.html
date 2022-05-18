@@ -14,12 +14,13 @@
         <h1> To do list </h1>
         <div class="search"> 
             <input type="search" name="search" id="searchTxt" placeholder="search to do list">
-            <button class="btn">search</button>
+            <button class="btn" onclick="clear()">search</button>
         </div>
     </nav>
 
 
     <section class="box">
+        <div class="boxjs" id="boxjss">
         <div class="hdr">
         <h1> welcome to pangas to do list</h1>
         <p> Make life easy by remember what to do today</p>
@@ -27,9 +28,12 @@
     </div>
     <div class="txt">
         <textarea name="txt" id="addTxt" rows="3" placeholder="write your note here...."></textarea>
+        <div>
         <button id="addBtn">Add  note</button>
+        <!-- <button onclick="dlt()">dlete all </button> -->
+        </div>
     </div>
-
+</div>
     <!-- ----note------------ -->
     <!-- ============notes====== -->
     </section>
@@ -51,7 +55,6 @@
         </section>
     </section>
     </section>
-
     <!-- ----------- -->
     <script src="script.js"></script>
 </body>
