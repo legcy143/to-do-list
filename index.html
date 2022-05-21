@@ -13,13 +13,15 @@
     <nav class="nav1">
         <h1> To do list </h1>
         <div class="search"> 
+            <div class="inpt" id="inpt">
             <input type="search" name="search" id="searchTxt" placeholder="search to do list.." autocomplete="off">
             <button class="btn" onclick="clear()">search</button>
         </div>
+    </div>
     </nav>
 
 
-    <section class="box">
+    <section class="box" id="box">
         <div class="boxjs" id="boxjss">
         <div class="hdr">
         <h1> welcome to pangas to do list</h1>
@@ -41,7 +43,8 @@
     <section class="box">
         <section class="notes">
             <div class="hdnote">
-            <h1>your to-do list</h1>
+            <h1 id="ybtn">your to-do list</h1>
+            <span id="xbtn" class="espan">close search</span>
         </div>
         <!-- ====notes dor notes ---- -->
         <section class="not"  id="notes">
@@ -54,6 +57,8 @@
         <!-- note----------- -->
         </section>
     </section>
+    <span id="sbtn" style="background: none; color: black; font-size: 2rem;margin-bottom: 100px;  text-align: center;
+    font-weight: bold;">no more result found....</span>
     </section>
     <!-- ----------- -->
     <script src="script.js"></script>

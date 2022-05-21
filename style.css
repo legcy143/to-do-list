@@ -2,6 +2,9 @@
     font-family: 'popins',sans-serif;
     box-sizing: border-box;
 }
+::-webkit-scrollbar{
+    width: 0px;
+}
 body{
     margin: 0;
     padding: 0;
@@ -10,14 +13,17 @@ body{
     justify-content: center;
     align-items: center;
 }
-nav{
+.nav1{
     box-shadow: 2px 0px 10px black;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 60px;
-    background-color: rgb(88, 238, 238);
+    background:  linear-gradient(to right,rgb(245, 71, 236) , pink, rgb(72, 72, 252));
+}
+.nav1{
+    font-size: 1.5rem;
 }
 .search{
     width: 70vw;
@@ -29,14 +35,28 @@ nav{
     padding: 4px;
     padding-left: 10px;
     font-size: 18px;
-    border: 1px solid white;
     border-radius: 5px;
-    width: 450px;
-    box-shadow: 2px 1px 5px black;
-
+    width: 480px;
+    border: 2px solid white;
+    outline: none;
+    float: left;
 }
+.search input:focus{
+    border-color: white;
+}
+.inpt{
+    padding: 2px;
+    border-radius: 12px;
+    border: 2px solid white;
+    background-color: white;
+    width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .search button{
-    margin-left: 10px;
+    margin-left: 1px;
     padding: 5px;
     background: linear-gradient(to left,rgb(245, 71, 236) , rgb(72, 72, 252));
     border: 0px solid green;
@@ -46,6 +66,7 @@ nav{
     color: white;
     text-shadow: 2px 2px 10px black;
     font-weight: bold;
+    float: right;
 }
 .box{
     display: block;
@@ -60,6 +81,7 @@ nav{
     text-align: center;
     box-shadow: 2px 0px 10px black;
     border-radius: 10px;
+    pointer-events: none;
 
 }
 .hdr h1{
@@ -100,6 +122,11 @@ nav{
     box-shadow: 4px 4px 10px black;
     cursor: pointer;
 }
+.txt button:disabled{
+    color: rgb(209, 209, 209);
+    background: linear-gradient(to left, rgb(216, 97, 210) , rgb(92, 92, 228));
+    box-shadow: 0px 0px 3px black;
+}
 .notes{
     margin-top: 50px;
     width: 100%;
@@ -112,12 +139,28 @@ nav{
     border-bottom: 2px solid rgb(119, 119, 119);
     box-shadow: 1px 1px 10px rgb(201, 201, 201);
     border-radius: 12px;
+    pointer-events: none;
 
 }
+.espan{
+    display: none;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+    background: linear-gradient(to left, rgb(245, 71, 236) , rgb(72, 72, 252));
+    border-radius: 10px;
+   
+}
 .note{
-    padding: 15px;
-    margin: 20px;
-    max-width: 290px;
+    padding: 10px;
+    margin: 12px;
+    max-width: 300px;
     box-shadow: 2px 2px 10px;
     text-align: center;
     word-wrap: break-word;
@@ -128,13 +171,14 @@ nav{
 }
 .note button{
     margin-top: 5px;
+    margin-bottom: 5px;
     width: 140px;
     height: 35px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     color: white;
     text-shadow: 2px 2px 10px black;
-    background: linear-gradient(to left,rgb(245, 71, 236) , rgb(72, 72, 252));
+    background: linear-gradient(to right,rgb(255, 66, 246) , rgb(68, 68, 255));
     border: 0px solid green;
     border-radius: 6px;
     box-shadow: 4px 4px 10px black;
@@ -163,17 +207,23 @@ nav{
 }
 
 @media (max-width:850px) {
-    nav{
+    .nav1{
         flex-direction: column;
-        height: 130px;
+        height: 120px;
+    }
+    .nav1{
+        font-size: 1.2rem;
     }
     .search{
         justify-content: center;
         width: 100vw;
         margin-bottom: 30px;
     }
+    .inpt{
+        width: 90%;
+    }
     .search input{
-        width: 75%;
+        width: 82%;
     }
     .box{
         width: 90%;

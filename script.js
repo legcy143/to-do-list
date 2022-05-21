@@ -97,3 +97,37 @@ function dlt(){
 // mark as a important
 // seprate notes by user
 // syns and host to web server
+
+
+// plz if u watching this solve this problem 
+
+// if (addTxt.value != null) {
+//     addBtn.disabled = false;
+// }
+
+// for advance search  additon feature
+
+let inpt = document.getElementById("inpt");
+let box = document.getElementById("box");
+let xbtn = document.getElementById("xbtn");
+let ybtn = document.getElementById("ybtn");
+let sbtn = document.getElementById("sbtn");
+
+inpt.onclick= function() {onclick()};
+xbtn.onclick = function() {click()};
+
+function onclick() {
+    box.style.display = "none";
+    ybtn.style.display = "none";
+    xbtn.style.display = "block";
+    sbtn.style.display = "block";
+  }
+  
+  function click() {
+    box.style.display = "block";
+    xbtn.style.display = "none";
+    ybtn.style.display = "block";
+    sbtn.style.display = "none";
+  }
+
+       
